@@ -22,6 +22,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 - Register PHP from within IIS 
 - Install OS Ticket
 - Assign Permissions
+- Create ticket data base/session
 
 
 <h2>Installation Steps</h2>
@@ -67,3 +68,4 @@ Within “c:\inetpub\wwwroot”, Rename “upload” to “osTicket”
 
 Permissions added to everyone (not best practice)
 
+<img width="1345" alt="image" src="https://github.com/user-attachments/assets/4d3426b5-a568-4f87-841e-69f8cc3cb57b" />
