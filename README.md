@@ -69,3 +69,6 @@ Within “c:\inetpub\wwwroot”, Rename “upload” to “osTicket”
 Permissions added to everyone (not best practice)
 
 <img width="1345" alt="image" src="https://github.com/user-attachments/assets/4d3426b5-a568-4f87-841e-69f8cc3cb57b" />
+
+<img width="724" alt="image" src="https://github.com/user-attachments/assets/b5f0ccd8-fa44-4f0c-a70d-39a84b604093" />
+
