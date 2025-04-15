@@ -79,28 +79,51 @@ Next you need to install VC_redist.x86.exe. from the osTicket-Installation-Files
 
 After thats completed you need to install SQL. To do this you go back into the osTicket-Installation-Files and extract the (mysql-5.5.62-win32.msi). Click typical install, launch the my SQL configuration wizard and click standard configuration.
 When it askl for the user name & password enter root for both (for the demonstration only). 
-  
-  
-  
-  From the “osTicket-Installation-Files” folder, unzip “osTicket-v1.15.8.zip” and copy the “upload” folder into “c:\inetpub\wwwroot”
-Within “c:\inetpub\wwwroot”, Rename “upload” to “osTicket”
+  Now the data base is complete. Empty but its configured.
 
+
+
+<img width="567" alt="image" src="https://github.com/user-attachments/assets/eaf31043-ee8f-49e1-99ac-dd87267aba9c" />
+
+  Open IIS as a administrator, double click the PHP drive and register new PHP (C:\PHP\php-cgi.exe). 
+  Restart the web sever and install OS ticket.
+   From the “osTicket-Installation-Files” folder, unzip “osTicket-v1.15.8.zip” and copy the “upload” folder into “c:\inetpub\wwwroot”
+Within “c:\inetpub\wwwroot”, Rename “upload” to “osTicket”. 
 </p>
-<br />
-
-<p>
-<img width="1295" alt="image" src="https://github.com/user-attachments/assets/d125f741-1e1d-43a1-aef9-d610802d81d5" />
-
-</p>
-<p>
 From the “osTicket-Installation-Files” folder, unzip “osTicket-v1.15.8.zip” and copy the “upload” folder into “c:\inetpub\wwwroot”
-Within “c:\inetpub\wwwroot”, Rename “upload” to “osTicket”
+Within “c:\inetpub\wwwroot”, Rename “upload” to “osTicket”. Again reload ISS.
 
-<br />
+<img width="1295" alt="image" src="https://github.com/user-attachments/assets/d125f741-1e1d-43a1-aef9-d610802d81d5" />
+<img width="239" alt="image" src="https://github.com/user-attachments/assets/55d66b60-83cf-45e9-b48c-f6f79ce423bb" />
+
+Go to IIS, sites -> Default -> osTicket
+Double-click PHP Manager
+Click “Enable or disable an extension”
+Enable: php_imap.dll
+Enable: php_intl.dll
+Enable: php_opcache.dll
+Refresh the osTicket site in your browser and notice the changes.
+
+<img width="298" alt="image" src="https://github.com/user-attachments/assets/ada9c082-0d08-48b0-8748-b3fdf7c5270d" />
+
+ Make sure you OS ticket has access to the permissions to do that, In the file explore rename: ost-config.php
+From: C:\inetpub\wwwroot\osTicket\include\ost-sampleconfig.php
+To: C:\inetpub\wwwroot\osTicket\include\ost-config.php
+
+From that right click the folder >Security>Advanced>Disable inherited permissions>Add> select principal>Everyone.
+This gives evryone full access to the os ticket (not best practice).
 <img width="868" alt="image" src="https://github.com/user-attachments/assets/8f765430-ed2c-45e1-a129-6078a433428b" />
 
-Permissions added to everyone (not best practice)
+The setup will include host name, email, user information/passsword. Befor clicking install you need to install HeidiSQL from the “osTicket-Installation-Files” folder.
+Open Heidi SQL
+Create a new session, user/password is root/root
+Connect to the session
+Create a database called “osTicket”
+Add this information into the data base settings.
 
+<img width="305" alt="image" src="https://github.com/user-attachments/assets/9bb16328-fe94-4070-b7ad-5c76d87b828d" />
+
+This is what it will look like once Permissions added to everyone (not best practice) and finish the set up.
 <img width="1345" alt="image" src="https://github.com/user-attachments/assets/4d3426b5-a568-4f87-841e-69f8cc3cb57b" />
 
 <img width="724" alt="image" src="https://github.com/user-attachments/assets/b5f0ccd8-fa44-4f0c-a70d-39a84b604093" />
